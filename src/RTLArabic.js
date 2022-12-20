@@ -149,8 +149,8 @@ class RTLArabic extends String {
   #addEngChar(index) {
     // Add english letters, numbers, and symbols as is
     while (
-      !RTLArabic.isArabic(this.chars[index]) &&
-      this.chars[index] !== undefined
+      this.chars[index] !== undefined &&
+      !RTLArabic.isArabic(this.chars[index])
     ) {
       this.engStr += this.chars[index];
       index++;
